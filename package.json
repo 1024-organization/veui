@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --dest docs/static/study-ui --name studyui packages/index.js",
+    "build": "yarn build:umd && yarn build:theme",
+    "build:umd": "vue-cli-service build --target lib --dest docs/static/lib --name studyui packages/index.js && cp-cli docs/static/lib/studyui.umd.min.js dist/studyui.min.js",
+    "build:theme": "webpack --config ./packages/theme/webpack.config.js && cp-cli packages/theme/lib/index.css docs/static/css/index.css && cp-cli packages/theme/lib/index.css dist/theme-default/index.css",
     "docs": "docsify serve docs",
     "lint": "vue-cli-service lint"
   },
@@ -16,10 +18,16 @@
     "@vue/cli-plugin-eslint": "^3.5.0",
     "@vue/cli-service": "^3.5.0",
     "babel-eslint": "^10.0.1",
+    "cp-cli": "^2.0.0",
+    "css-loader": "^2.1.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.9.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   }
 }

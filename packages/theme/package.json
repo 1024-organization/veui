@@ -1,0 +1,25 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "description": "a vue component style",
+  "main": "index.scss",
+  "scripts": {
+    "build": "webpack -o ../../docs/static/css"
+  },
+  "author": {
+    "name": "yimou6"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "style-loader": "^0.23.1"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
