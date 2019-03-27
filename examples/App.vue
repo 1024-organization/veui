@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     Hello World
-    <sd-button />
+    <st-button />
   </div>
 </template>
 
