@@ -2,6 +2,10 @@
   <div id="app">
     Hello World
     <st-button />
+    <st-row>
+      <st-col>这是col，外层是row</st-col>
+      <st-col>这是col，外层是row</st-col>
+    </st-row>
   </div>
 </template>
 

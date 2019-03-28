@@ -1,7 +1,9 @@
 import Button from './button'
+import Row from './row'
+import Col from './col'
 
 const components = [
-  Button
+  Button, Row, Col
 ]
 
 const install = function (Vue) {
@@ -16,5 +18,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  Button
+  Button,
+  Col,
+  Row
 }
